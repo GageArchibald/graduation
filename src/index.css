@@ -51,12 +51,6 @@
   }
 }
 
-    --border: 25 15% 25%;
-    --input: 25 15% 25%;
-    --ring: 12 80% 55%;
-  }
-}
-
 @layer base {
   * {
     @apply border-border;
