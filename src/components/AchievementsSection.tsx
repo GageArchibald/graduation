@@ -9,18 +9,18 @@ const AchievementsSection = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-secondary/50 to-background">
+    <section className="py-24 md:py-32 bg-background">
       <div className="container max-w-5xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-            <Trophy className="w-8 h-8 text-primary" />
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-secondary border border-primary/20 mb-6">
+            <Trophy className="w-7 h-7 text-primary" />
           </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             Academic <span className="text-primary">Milestones</span>
           </h2>
-          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
-            A four-year journey of growth, learning, and achievement in Information Technology
+          <p className="font-sans text-base text-muted-foreground max-w-2xl mx-auto">
+            Four years of consistent growth and achievement in Information Technology
           </p>
         </div>
 
@@ -29,42 +29,37 @@ const AchievementsSection = () => {
           {milestones.map((milestone, index) => (
             <div 
               key={index}
-              className="flex items-start gap-6 bg-card/50 backdrop-blur-sm rounded-xl p-6 border border-border/50 hover:border-primary/50 hover:bg-card hover:shadow-md transition-all duration-300 group"
+              className="flex items-start gap-6 bg-secondary rounded-lg p-6 border border-primary/10 hover:border-primary/40 hover:bg-secondary/80 transition-all duration-300 group"
             >
               {/* Number indicator */}
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground font-bold text-lg">
+              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-semibold text-sm">
                 {index + 1}
               </div>
 
               {/* Content */}
-              <div className="flex-1 pt-1">
-                <div className="flex items-baseline gap-3 mb-2">
-                  <h3 className="font-display text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+              <div className="flex-1 pt-0.5">
+                <div className="flex items-baseline gap-3 mb-1">
+                  <h3 className="font-display text-lg md:text-xl font-bold text-foreground">
                     {milestone.title}
                   </h3>
-                  <span className="text-sm font-semibold text-primary/70">{milestone.year}</span>
+                  <span className="text-xs font-semibold text-muted-foreground">{milestone.year}</span>
                 </div>
-                <p className="font-sans text-muted-foreground leading-relaxed">{milestone.description}</p>
-              </div>
-
-              {/* Icon and Checkmark */}
-              <div className="flex-shrink-0 flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-primary hidden sm:block" />
+                <p className="font-sans text-sm text-muted-foreground">{milestone.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Final achievement unlocked */}
+        {/* Final achievement */}
         <div className="mt-16 text-center">
-          <div className="inline-block bg-gradient-to-r from-primary via-accent to-primary rounded-xl p-8 md:p-12 shadow-lg">
+          <div className="inline-block bg-primary rounded-lg p-8 md:p-12">
             <div className="mb-4">
-              <Trophy className="w-12 h-12 mx-auto text-primary-foreground" />
+              <Trophy className="w-10 h-10 mx-auto text-primary-foreground" />
             </div>
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-primary-foreground mb-2">
               Degree Conferred
             </h3>
-            <div className="space-y-2 font-sans text-primary-foreground/90">
+            <div className="space-y-1 font-sans text-primary-foreground/90 text-sm">
               <p className="font-semibold">Bachelor of Science</p>
               <p>Information Technology</p>
               <p>Utah Tech University • Class of 2025</p>

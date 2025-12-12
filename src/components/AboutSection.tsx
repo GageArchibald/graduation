@@ -2,72 +2,65 @@ import { Droplet, Code, Moon, Pizza, Gamepad2, Heart } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="celebrate" className="py-20 md:py-28 bg-background">
+    <section id="celebrate" className="py-24 md:py-32 bg-background">
       <div className="container max-w-5xl mx-auto px-6">
         {/* Section header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
-            <Code className="w-8 h-8 text-primary" />
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-secondary border border-primary/20 mb-6">
+            <Code className="w-7 h-7 text-primary" />
           </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            The Journey Was <span className="text-primary">Rewarding</span>
+            Academic <span className="text-primary">Journey</span>
           </h2>
-          <p className="font-sans text-lg text-muted-foreground max-w-xl mx-auto">
-            Four years of coding, caffeine, and occasional chaos. Here's how I survived...
+          <p className="font-sans text-base text-muted-foreground max-w-2xl mx-auto">
+            Four years of dedication, growth, and technical excellence in Information Technology
           </p>
         </div>
 
-        {/* Fun survival stats */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-16">
+        {/* Stats grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-20">
           <SurvivalCard 
-            emoji=""
             stat="∞"
-            label="Dr Peppers"
-            color="bg-red-100 border-red-200"
+            label="Dedication"
+            color="bg-secondary border-primary/20"
           />
           <SurvivalCard 
-            emoji=""
             stat="100+"
-            label="All-Nighters"
-            color="bg-indigo-100 border-indigo-200"
+            label="Late Nights"
+            color="bg-secondary border-primary/20"
           />
           <SurvivalCard 
-            emoji=""
             stat="1000s"
-            label="Bugs Squashed"
-            color="bg-emerald-100 border-emerald-200"
+            label="Bugs Fixed"
+            color="bg-secondary border-primary/20"
           />
           <SurvivalCard 
-            emoji=""
             stat="Many"
-            label="Pizza Nights"
-            color="bg-red-100 border-red-200"
+            label="Projects"
+            color="bg-secondary border-primary/20"
           />
           <SurvivalCard 
-            emoji=""
             stat="A Few"
-            label="Panic Moments"
-            color="bg-yellow-100 border-yellow-200"
+            label="Challenges"
+            color="bg-secondary border-primary/20"
           />
           <SurvivalCard 
-            emoji=""
-            stat="Some"
-            label="Study Breaks"
-            color="bg-purple-100 border-purple-200"
+            stat="∞"
+            label="Learning"
+            color="bg-secondary border-primary/20"
           />
         </div>
 
         {/* Personal message */}
-        <div className="bg-gradient-to-r from-secondary via-card to-secondary rounded-3xl p-8 md:p-12 text-center border border-border">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-6">
+        <div className="bg-secondary rounded-lg p-8 md:p-12 text-center border border-primary/10">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 mb-6">
             <Heart className="w-6 h-6 text-primary" />
           </div>
-          <p className="font-sans text-xl md:text-2xl text-foreground leading-relaxed mb-6">
-            "To everyone who supported me through challenging coursework, 
-            difficult exams, and moments of doubt..."
+          <p className="font-sans text-base md:text-lg text-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
+            I'm grateful for everyone who supported me through this educational journey. Your encouragement and guidance made a difference.
           </p>
-          <p className="font-display text-3xl md:text-4xl font-bold text-primary">
-            Thank You!
+          <p className="font-display text-2xl md:text-3xl font-semibold text-primary">
+            Thank You
           </p>
         </div>
       </div>
@@ -76,15 +69,14 @@ const AboutSection = () => {
 };
 
 interface SurvivalCardProps {
-  emoji: string;
   stat: string;
   label: string;
   color: string;
 }
 
-const SurvivalCard = ({ emoji, stat, label, color }: SurvivalCardProps) => {
+const SurvivalCard = ({ stat, label, color }: Omit<SurvivalCardProps, 'emoji'>) => {
   return (
-    <div className={`${color} rounded-xl p-6 text-center border hover:border-primary/50 hover:shadow-md transition-all duration-300`}>
+    <div className={`${color} rounded-lg p-6 text-center border hover:border-primary/40 hover:bg-secondary/80 transition-all duration-300`}>
       <div className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
         {stat}
       </div>
