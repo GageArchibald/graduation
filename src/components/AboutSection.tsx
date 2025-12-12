@@ -20,37 +20,37 @@ const AboutSection = () => {
         {/* Fun survival stats */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-16">
           <SurvivalCard 
-            emoji="🥤"
+            emoji=""
             stat="∞"
             label="Dr Peppers"
             color="bg-red-100 border-red-200"
           />
           <SurvivalCard 
-            emoji="🌙"
+            emoji=""
             stat="100+"
             label="All-Nighters"
             color="bg-indigo-100 border-indigo-200"
           />
           <SurvivalCard 
-            emoji="🐛"
+            emoji=""
             stat="1000s"
             label="Bugs Squashed"
             color="bg-emerald-100 border-emerald-200"
           />
           <SurvivalCard 
-            emoji="🍕"
+            emoji=""
             stat="Many"
             label="Pizza Nights"
             color="bg-red-100 border-red-200"
           />
           <SurvivalCard 
-            emoji="😅"
+            emoji=""
             stat="A Few"
             label="Panic Moments"
             color="bg-yellow-100 border-yellow-200"
           />
           <SurvivalCard 
-            emoji="🎮"
+            emoji=""
             stat="Some"
             label="Study Breaks"
             color="bg-purple-100 border-purple-200"
@@ -85,7 +85,6 @@ interface SurvivalCardProps {
 const SurvivalCard = ({ emoji, stat, label, color }: SurvivalCardProps) => {
   return (
     <div className={`${color} rounded-xl p-6 text-center border hover:border-primary/50 hover:shadow-md transition-all duration-300`}>
-      <span className="text-3xl block mb-3">{emoji}</span>
       <div className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
         {stat}
       </div>

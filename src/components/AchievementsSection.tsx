@@ -2,10 +2,10 @@ import { CheckCircle2, Trophy, Rocket, Star } from "lucide-react";
 
 const AchievementsSection = () => {
   const milestones = [
-    { year: "Year 1", title: "Foundations", emoji: "📚", description: "Discovered the foundation of information technology" },
-    { year: "Year 2", title: "Core Concepts", emoji: "💡", description: "Advanced programming and systems knowledge" },
-    { year: "Year 3", title: "Applied Learning", emoji: "⚙️", description: "Developed professional-grade applications" },
-    { year: "Year 4", title: "Capstone Complete", emoji: "✓", description: "Completed Bachelor's in Information Technology" },
+    { year: "Year 1", title: "Foundations", emoji: "", description: "Discovered the foundation of information technology" },
+    { year: "Year 2", title: "Core Concepts", emoji: "", description: "Advanced programming and systems knowledge" },
+    { year: "Year 3", title: "Applied Learning", emoji: "", description: "Developed professional-grade applications" },
+    { year: "Year 4", title: "Capstone Complete", emoji: "", description: "Completed Bachelor's in Information Technology" },
   ];
 
   return (
@@ -49,7 +49,6 @@ const AchievementsSection = () => {
 
               {/* Icon and Checkmark */}
               <div className="flex-shrink-0 flex items-center gap-2">
-                <span className="text-2xl">{milestone.emoji}</span>
                 <CheckCircle2 className="w-5 h-5 text-primary hidden sm:block" />
               </div>
             </div>
