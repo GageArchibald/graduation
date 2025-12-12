@@ -6,9 +6,11 @@ const AboutSection = () => {
       <div className="container max-w-5xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <span className="text-5xl mb-4 block">🎉</span>
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
+            <Code className="w-8 h-8 text-primary" />
+          </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            The Journey Was <span className="text-primary">Wild</span>
+            The Journey Was <span className="text-primary">Rewarding</span>
           </h2>
           <p className="font-sans text-lg text-muted-foreground max-w-xl mx-auto">
             Four years of coding, caffeine, and occasional chaos. Here's how I survived...
@@ -57,13 +59,15 @@ const AboutSection = () => {
 
         {/* Personal message */}
         <div className="bg-gradient-to-r from-secondary via-card to-secondary rounded-3xl p-8 md:p-12 text-center border border-border">
-          <span className="text-4xl block mb-4">💬</span>
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-6">
+            <Heart className="w-6 h-6 text-primary" />
+          </div>
           <p className="font-sans text-xl md:text-2xl text-foreground leading-relaxed mb-6">
-            "To everyone who supported me through late-night debugging sessions, 
-            midterm meltdowns, and that one time I almost gave up on recursion..."
+            "To everyone who supported me through challenging coursework, 
+            difficult exams, and moments of doubt..."
           </p>
           <p className="font-display text-3xl md:text-4xl font-bold text-primary">
-            THANK YOU! 🙏❤️
+            Thank You!
           </p>
         </div>
       </div>
@@ -80,12 +84,12 @@ interface SurvivalCardProps {
 
 const SurvivalCard = ({ emoji, stat, label, color }: SurvivalCardProps) => {
   return (
-    <div className={`${color} rounded-2xl p-6 text-center border-2 hover:scale-105 transition-transform duration-300 cursor-default`}>
-      <span className="text-4xl block mb-2">{emoji}</span>
-      <div className="font-display text-3xl md:text-4xl font-bold text-foreground mb-1">
+    <div className={`${color} rounded-xl p-6 text-center border hover:border-primary/50 hover:shadow-md transition-all duration-300`}>
+      <span className="text-3xl block mb-3">{emoji}</span>
+      <div className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
         {stat}
       </div>
-      <p className="font-sans text-sm text-muted-foreground">{label}</p>
+      <p className="font-sans text-xs font-medium text-muted-foreground uppercase tracking-wide">{label}</p>
     </div>
   );
 };

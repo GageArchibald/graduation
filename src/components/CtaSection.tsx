@@ -1,4 +1,4 @@
-import { Heart, PartyPopper } from "lucide-react";
+import { Heart, PartyPopper, Rocket, Sparkles } from "lucide-react";
 
 const CtaSection = () => {
   return (
@@ -6,9 +6,11 @@ const CtaSection = () => {
       <div className="container max-w-3xl mx-auto px-6 text-center">
         {/* Big thank you */}
         <div className="mb-12">
-          <span className="text-6xl md:text-7xl block mb-6">🥳</span>
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-8">
+            <Heart className="w-10 h-10 text-primary fill-primary" />
+          </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Couldn't Have Done It <span className="text-primary">Without You!</span>
+            Couldn't Have Done It <span className="text-primary">Without You</span>
           </h2>
           <p className="font-sans text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed">
             To my family, friends, professors, and everyone who believed in me 
@@ -26,16 +28,16 @@ const CtaSection = () => {
         </div>
 
         {/* Fun fact cards */}
-        <div className="grid md:grid-cols-2 gap-4 mb-12">
-          <div className="bg-mint/30 rounded-2xl p-6 border-2 border-mint">
-            <span className="text-3xl block mb-2">🚀</span>
-            <h3 className="font-display text-xl font-bold text-foreground mb-1">What's Next?</h3>
-            <p className="font-sans text-muted-foreground">Time to take over the tech world! (Or at least land a job 😅)</p>
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="bg-mint/30 rounded-xl p-8 border border-mint/50 hover:border-mint hover:shadow-md transition-all duration-300">
+            <Rocket className="w-8 h-8 text-primary mb-4" />
+            <h3 className="font-display text-xl font-bold text-foreground mb-2">What's Next?</h3>
+            <p className="font-sans text-muted-foreground">Excited to start my career in information technology and make an impact in the field</p>
           </div>
-          <div className="bg-lavender/30 rounded-2xl p-6 border-2 border-lavender">
-            <span className="text-3xl block mb-2">🎊</span>
-            <h3 className="font-display text-xl font-bold text-foreground mb-1">Celebration Mode</h3>
-            <p className="font-sans text-muted-foreground">Party planning in progress! You're all invited 🎉</p>
+          <div className="bg-lavender/30 rounded-xl p-8 border border-lavender/50 hover:border-lavender hover:shadow-md transition-all duration-300">
+            <Sparkles className="w-8 h-8 text-primary mb-4" />
+            <h3 className="font-display text-xl font-bold text-foreground mb-2">Celebration Time</h3>
+            <p className="font-sans text-muted-foreground">Looking forward to celebrating this milestone with friends and family</p>
           </div>
         </div>
 
@@ -46,7 +48,7 @@ const CtaSection = () => {
             Thanks for being part of my journey!
           </p>
           <p className="font-sans text-primary-foreground/80 text-lg">
-            Love you all! ❤️
+            Thank you all!
           </p>
         </div>
       </div>

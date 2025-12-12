@@ -11,14 +11,14 @@ const HeroSection = () => {
         <div className="absolute bottom-1/3 right-1/3 w-24 h-24 rounded-full bg-teal/30 blur-xl animate-float animation-delay-400" />
       </div>
 
-      {/* Emoji decorations */}
+      {/* Decorative accent circles */}
       <div className="absolute inset-0 pointer-events-none">
-        <span className="absolute text-4xl top-[15%] left-[10%] animate-bounce-in animation-delay-500 opacity-0">🎉</span>
-        <span className="absolute text-5xl top-[20%] right-[15%] animate-bounce-in animation-delay-600 opacity-0">🎓</span>
-        <span className="absolute text-3xl bottom-[25%] left-[15%] animate-bounce-in animation-delay-700 opacity-0">⭐</span>
-        <span className="absolute text-4xl bottom-[30%] right-[10%] animate-bounce-in animation-delay-800 opacity-0">🥳</span>
-        <span className="absolute text-3xl top-[40%] left-[5%] animate-bounce-in animation-delay-400 opacity-0">✨</span>
-        <span className="absolute text-3xl top-[50%] right-[5%] animate-bounce-in animation-delay-500 opacity-0">🎊</span>
+        <div className="absolute top-[15%] left-[10%] w-2 h-2 rounded-full bg-primary-foreground/40 animate-pulse" />
+        <div className="absolute top-[20%] right-[15%] w-3 h-3 rounded-full bg-accent/40 animate-pulse animation-delay-600" />
+        <div className="absolute bottom-[25%] left-[15%] w-2 h-2 rounded-full bg-primary-foreground/30 animate-pulse animation-delay-700" />
+        <div className="absolute bottom-[30%] right-[10%] w-3 h-3 rounded-full bg-accent/40 animate-pulse animation-delay-800" />
+        <div className="absolute top-[40%] left-[5%] w-2 h-2 rounded-full bg-primary-foreground/40 animate-pulse animation-delay-400" />
+        <div className="absolute top-[50%] right-[5%] w-3 h-3 rounded-full bg-accent/40 animate-pulse animation-delay-500" />
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -36,9 +36,9 @@ const HeroSection = () => {
           I DID IT!
         </h1>
 
-        {/* Cap emoji wiggle */}
-        <div className="animate-bounce-in opacity-0 animation-delay-300 text-7xl md:text-8xl my-6">
-          <span className="inline-block animate-wiggle">🎓</span>
+        {/* Cap icon */}
+        <div className="animate-bounce-in opacity-0 animation-delay-300 my-8">
+          <GraduationCap className="w-20 h-20 md:w-28 md:h-28 mx-auto text-primary-foreground animate-wiggle" />
         </div>
 
         {/* Subheading */}
@@ -48,7 +48,7 @@ const HeroSection = () => {
 
         {/* University */}
         <p className="animate-fade-up opacity-0 animation-delay-500 font-sans text-lg text-primary-foreground/80 mb-8">
-          Utah Tech University 🏛️
+          Utah Tech University
         </p>
 
         {/* Fun CTA */}
@@ -65,8 +65,10 @@ const HeroSection = () => {
         {/* Scroll hint */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in opacity-0 animation-delay-800">
           <div className="flex flex-col items-center gap-2 text-primary-foreground/60">
-            <span className="text-sm font-medium">Scroll for more fun</span>
-            <div className="text-2xl animate-bounce">👇</div>
+            <span className="text-sm font-medium">Scroll for more</span>
+            <div className="w-5 h-8 border-2 border-primary-foreground/40 rounded-full flex items-start justify-center p-2 animate-bounce">
+              <div className="w-1 h-2 bg-primary-foreground/60 rounded-full animate-bounce" />
+            </div>
           </div>
         </div>
       </div>
